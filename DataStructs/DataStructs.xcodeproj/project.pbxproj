@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE04E22329475BA70049F858 /* Graph+ShortestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04E22229475BA70049F858 /* Graph+ShortestPath.swift */; };
 		FE6CCDF328F74D620090D5C8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDF228F74D620090D5C8 /* main.swift */; };
 		FE6CCDFB28F74D850090D5C8 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDFA28F74D850090D5C8 /* Graph.swift */; };
 		FE6CCDFD28F74D9F0090D5C8 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDFC28F74D9F0090D5C8 /* Vertex.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE04E22229475BA70049F858 /* Graph+ShortestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graph+ShortestPath.swift"; sourceTree = "<group>"; };
 		FE6CCDEF28F74D620090D5C8 /* DataStructs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructs; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6CCDF228F74D620090D5C8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FE6CCDFA28F74D850090D5C8 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FE6CCDFA28F74D850090D5C8 /* Graph.swift */,
 				FE6CCDFC28F74D9F0090D5C8 /* Vertex.swift */,
 				FE6CCDFE28F74DD20090D5C8 /* Edge.swift */,
+				FE04E22229475BA70049F858 /* Graph+ShortestPath.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				FE6CCDFF28F74DD20090D5C8 /* Edge.swift in Sources */,
 				FE6CCDFD28F74D9F0090D5C8 /* Vertex.swift in Sources */,
 				FE6CCDF328F74D620090D5C8 /* main.swift in Sources */,
+				FE04E22329475BA70049F858 /* Graph+ShortestPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
