@@ -22,6 +22,7 @@ class Edge<T>: Equatable where T: Equatable, T: Hashable {
         self.isDirected = isDeirected
 
         fromVertex.edgeList.append(self)
+        toVertex.edgeList.append(self)
     }
 }
 

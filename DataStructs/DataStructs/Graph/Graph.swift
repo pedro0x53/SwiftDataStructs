@@ -11,6 +11,28 @@ class Graph<T>: Equatable where T: Equatable, T: Hashable {
     var edges: [Edge<T>]
     var vertices: [Vertex<T>]
 
+    var isRegular: Bool {
+        guard let randomVertex = self.vertices.randomElement()
+        else { return true }
+
+        return self.vertices.allSatisfy { $0.edgeList.count == randomVertex.edgeList.count }
+    }
+
+    var isWheel: Bool {
+        guard self.vertices.count > 3,
+              let wheelCenter = self.vertices.first(where: { $0.edgeList.count == self.vertices.count - 1 }),
+              let nonWheelCenterVertex = self.vertices.first(where: { $0 != wheelCenter })
+        else { return false }
+
+        return self.vertices.allSatisfy { vertex in
+            if vertex == wheelCenter {
+                return true
+            } else {
+                return vertex.edgeList.count == nonWheelCenterVertex.edgeList.count
+            }
+        }
+    }
+
     init(vertices: [Vertex<T>] = [], edges: [Edge<T>] = []) {
         self.edges = edges
         self.vertices = vertices
