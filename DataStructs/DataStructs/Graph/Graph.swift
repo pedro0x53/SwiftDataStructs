@@ -11,28 +11,6 @@ class Graph<T>: Equatable where T: Equatable, T: Hashable {
     var edges: [Edge<T>]
     var vertices: [Vertex<T>]
 
-    var isRegular: Bool {
-        guard let randomVertex = self.vertices.randomElement()
-        else { return true }
-
-        return self.vertices.allSatisfy { $0.edgeList.count == randomVertex.edgeList.count }
-    }
-
-    var isWheel: Bool {
-        guard self.vertices.count > 3,
-              let wheelCenter = self.vertices.first(where: { $0.edgeList.count == self.vertices.count - 1 }),
-              let nonWheelCenterVertex = self.vertices.first(where: { $0 != wheelCenter })
-        else { return false }
-
-        return self.vertices.allSatisfy { vertex in
-            if vertex == wheelCenter {
-                return true
-            } else {
-                return vertex.edgeList.count == nonWheelCenterVertex.edgeList.count
-            }
-        }
-    }
-
     init(vertices: [Vertex<T>] = [], edges: [Edge<T>] = []) {
         self.edges = edges
         self.vertices = vertices
@@ -49,7 +27,7 @@ class Graph<T>: Equatable where T: Equatable, T: Hashable {
     }
 
     func addEdge(from fromVertex: Vertex<T>, to toVertex: Vertex<T>,
-                          with weight: Double = 0, isDirected: Bool = false) {
+                 with weight: Double = 0, isDirected: Bool = false) {
         let newEdge = Edge<T>(from: fromVertex, to: toVertex, with: weight, isDeirected: isDirected)
         self.edges.append(newEdge)
     }
@@ -76,7 +54,7 @@ class Graph<T>: Equatable where T: Equatable, T: Hashable {
         return matrix
     }
 
-    func count(_ vertex: Vertex<T>) -> (entering: Int, leaving: Int) {
+    func degree(of vertex: Vertex<T>) -> (entering: Int, leaving: Int) {
         var entering: Int = 0
         var leaving: Int = 0
         for edge in edges {
@@ -199,8 +177,8 @@ extension Graph {
 
         for line in 0..<numberOfVertices {
             for column in 0..<numberOfEdges {
-                if incidenceMatrix[line][column] == 1 {
-                    for secondLine in 0..<numberOfVertices {
+                if incidenceMatrix[line][column] == 1 && line < numberOfVertices {
+                    for secondLine in (line + 1)..<numberOfVertices {
                         if incidenceMatrix[secondLine][column] == 1 && line != secondLine {
                             graph.addEdge(from: graph[line], to: graph[secondLine])
                             continue

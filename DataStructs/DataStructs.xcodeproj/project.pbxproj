@@ -12,6 +12,8 @@
 		FE6CCDFB28F74D850090D5C8 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDFA28F74D850090D5C8 /* Graph.swift */; };
 		FE6CCDFD28F74D9F0090D5C8 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDFC28F74D9F0090D5C8 /* Vertex.swift */; };
 		FE6CCDFF28F74DD20090D5C8 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CCDFE28F74DD20090D5C8 /* Edge.swift */; };
+		FE74C1F1294D18C500622425 /* Graph+ComputedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74C1F0294D18C500622425 /* Graph+ComputedProperties.swift */; };
+		FE74C1F3294D1F7F00622425 /* Graph+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE74C1F2294D1F7F00622425 /* Graph+Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		FE6CCDFA28F74D850090D5C8 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		FE6CCDFC28F74D9F0090D5C8 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		FE6CCDFE28F74DD20090D5C8 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		FE74C1F0294D18C500622425 /* Graph+ComputedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graph+ComputedProperties.swift"; sourceTree = "<group>"; };
+		FE74C1F2294D1F7F00622425 /* Graph+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graph+Functions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				FE6CCDFC28F74D9F0090D5C8 /* Vertex.swift */,
 				FE6CCDFE28F74DD20090D5C8 /* Edge.swift */,
 				FE04E22229475BA70049F858 /* Graph+ShortestPath.swift */,
+				FE74C1F0294D18C500622425 /* Graph+ComputedProperties.swift */,
+				FE74C1F2294D1F7F00622425 /* Graph+Functions.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -142,8 +148,10 @@
 			files = (
 				FE6CCDFB28F74D850090D5C8 /* Graph.swift in Sources */,
 				FE6CCDFF28F74DD20090D5C8 /* Edge.swift in Sources */,
+				FE74C1F1294D18C500622425 /* Graph+ComputedProperties.swift in Sources */,
 				FE6CCDFD28F74D9F0090D5C8 /* Vertex.swift in Sources */,
 				FE6CCDF328F74D620090D5C8 /* main.swift in Sources */,
+				FE74C1F3294D1F7F00622425 /* Graph+Functions.swift in Sources */,
 				FE04E22329475BA70049F858 /* Graph+ShortestPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

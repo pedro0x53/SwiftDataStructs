@@ -7,7 +7,9 @@
 
 import Foundation
 
-class Vertex<T>: Equatable where T: Equatable, T: Hashable {
+class Vertex<T>: Equatable, Hashable where T: Equatable, T: Hashable {
+    let identifier: UUID = UUID()
+
     let index: Int
     var data: T
     var label: String
@@ -18,6 +20,10 @@ class Vertex<T>: Equatable where T: Equatable, T: Hashable {
         self.data = data
         self.index = index
         self.label = label ?? "\(data)"
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.identifier)
     }
 }
 

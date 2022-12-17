@@ -8,6 +8,8 @@
 import Foundation
 
 class Edge<T>: Equatable where T: Equatable, T: Hashable {
+    let identifier: UUID = UUID()
+
     var fromVertex: Vertex<T>
     var toVertex: Vertex<T>
 
@@ -30,6 +32,7 @@ extension Edge {
     static func == (lhs: Edge<T>, rhs: Edge<T>) -> Bool {
         return  lhs.fromVertex == rhs.fromVertex &&
                 lhs.toVertex == rhs.toVertex &&
-                lhs.weight == rhs.weight
+                lhs.weight == rhs.weight &&
+                lhs.isDirected == rhs.isDirected
     }
 }
